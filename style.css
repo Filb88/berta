@@ -66,6 +66,12 @@ header {
     text-decoration: none;
 }
 
+
+
+  .logo-img:hover {
+    opacity: 0.5; /* Slightly fainter when hovered */
+  }
+
 menu {
     display: flex;
     gap: 2rem; /* Reduce gap for better spacing */
@@ -84,12 +90,25 @@ menu a {
     font-style: normal;
     color: black;
     text-decoration: none;
+
 }
 
 menu a h4 {
     font-weight: 400; /* Ensure any headings within anchors also maintain the same weight */
+    opacity: 1; /* Fully opaque */
+    
 }
 
+
+  
+  /* Hover state */
+menu a:hover {
+    opacity: 0.5; /* Slightly fainter when hovered */
+  }
+
+
+
+  
 main {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
@@ -143,6 +162,9 @@ main {
     justify-content: center;
     align-items: center;
 }
+.buttonbackground:hover {
+    background-color: #daebea;
+  }
 
 .dividerlinediv {
     display: flex;
@@ -159,7 +181,20 @@ main {
 .h1head {
     text-align: left;
     padding-bottom: 2.5rem;
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(5px); /* Move the element slightly downward */
+    animation: fadeIn 0.7s ease-in-out forwards; /* Make the animation 2 seconds for better visibility */
 }
+
+
+.info {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(0px); /* Move the element slightly downward */
+    animation: fadeIn2 2s ease-in-out forwards; /* Make the animation 2 seconds for better visibility */
+}
+
+
+
 
 .line {
     height: 2px;
@@ -190,6 +225,30 @@ main {
     font-style: normal;
     margin: 0; /* Remove any default margins to ensure proper centering */
 }
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Fully transparent */
+        transform: translateY(10px); /* Start 20px lower */
+    }
+    100% {
+        opacity: 1; /* Fully opaque */
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0; /* Fully transparent */
+        
+    }
+    100% {
+        opacity: 1; /* Fully opaque */
+        
+    }
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1100px) {
