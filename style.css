@@ -218,6 +218,10 @@ main {
     
 }
 
+.leftsideparagraph p {
+    text-align: left;
+}
+
 .buttonbackground h4 {
     color: black;
     font-family: "Tenor Sans", sans-serif;
@@ -264,7 +268,260 @@ main {
         text-align: center; /* Center menu items */
         padding-top: 1rem;
         padding-bottom: 2rem;
+    }/*
+Colors
+#FEE7D7
+#824F1F
+#301F12
+#C6DFDD
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and border widths are included in element's total width and height */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: rgb(254,231,215);
+    background: linear-gradient(180deg, rgba(254,231,215,1) 75%, rgb(252, 239, 230) 95%);
+    background-attachment: fixed;
+    max-width: 1920px;
+    min-height: 100vh; 
+    margin: 0 auto; /* Center the body horizontally if the viewport is wider */
+    padding: 20px; /* Add padding to ensure equal margins on smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center content */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Horizontally center the header content */
+    align-items: center; /* Vertically align items */
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px; /* Control the header width */
+    margin: 0 auto; /* Center the header content */
+    position: relative;
+}
+
+.logodiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-img {
+    width: 10rem;
+    margin-bottom: 0.5rem; /* Adjusts spacing between image and text */
+}
+
+.logodiv a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    text-decoration: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #301F12;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 10px);
+    
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -10px);
+    
+}
+
+/* Hide the menu completely by default */
+.menu {
+    display: none; /* Ensures the menu is hidden */
+    gap: 2rem;
+    flex-direction: column;
+    padding-top: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Show the menu when open */
+.menu.open {
+    display: block; /* Make the menu visible when active */
+    max-height: 300px; /* Expand the menu */
+}
+
+@media (max-width: 1100px) {
+    .hamburger {
+        display: flex;
     }
+
+    .menu {
+        display: none; /* Hidden on small screens */
+        flex-direction: column;
+    }
+
+    .menu.open {
+        display: block; /* Visible on small screens when open */
+    }
+
+    .menu a {
+        padding: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+menu a {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+}
+
+menu a h4 {
+    font-weight: 400; /* Ensure any headings within anchors also maintain the same weight */
+    opacity: 1; /* Fully opaque */
+}
+
+menu a:hover {
+    opacity: 0.5; /* Slightly fainter when hovered */
+}
+
+/* Other styles continue as before */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Vertically center content */
+    gap: 20px; /* Add gap between elements */
+    width: 100%; /* Ensure main takes full width of the container */
+    max-width: 1200px; /* Control the main content width */
+    margin: 0 auto; /* Center the main content */
+}
+
+.leftsideparagraph {
+    flex: 1 1 60%;
+    min-width: 300px;
+    text-align: center;
+}
+
+
+
+.rightsideimg {
+    flex: 1 1 35%;
+    min-width: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.behindimg {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-35%);
+    z-index: 1;
+    background-color: #301F12;
+    border-radius: 1%;
+    width: 105%;
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+.portrait {
+    max-width: 100%;
+    border-radius: 1%;
+    position: relative;
+    z-index: 2;
+}
+
+.buttonbackground {
+    height: 28px;
+    background-color: #C6DFDD;
+    border-radius: 8px;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonbackground:hover {
+    background-color: #daebea;
+}
+
+.h1head {
+    text-align: left;
+    padding-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.info {
+    opacity: 0;
+    transform: translateY(0px);
+    animation: fadeIn2 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
     main {
         flex-direction: column;
@@ -301,10 +558,11 @@ main {
 
     }
 
-        .line {
+    .line {
         width: 180px;
     }
 }
+
 
 @media (max-width: 500px) {
     
