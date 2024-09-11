@@ -300,4 +300,8 @@ main {
         text-align: center;
 
     }
+
+        .line {
+        width: 180px;
+    }
 }
