@@ -220,6 +220,7 @@ main {
 
 .leftsideparagraph p {
     text-align: left;
+    max-width: 700px;
 }
 
 .buttonbackground h4 {
