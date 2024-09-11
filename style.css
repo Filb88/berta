@@ -305,3 +305,11 @@ main {
         width: 180px;
     }
 }
+
+@media (max-width: 500px) {
+    
+
+    .line {
+        width: 110px;
+    }
+}
