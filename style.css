@@ -300,6 +300,10 @@ Colors
     box-sizing: border-box; /* Ensure padding and border widths are included in element's total width and height */
 }
 
+.logodiv {
+    max-width: 300px;
+}
+
 html {
     height: 100%;
 }
