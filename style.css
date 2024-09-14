@@ -772,4 +772,12 @@ main {
             position: relative;
         }
     }
-    
+
+
+
+/* Make sure it's explicitly hidden on larger screens */
+@media (min-width: 1101px) {
+    .hamburger {
+        display: none !important; /* Forcefully hide on larger screens */
+    }
+}
