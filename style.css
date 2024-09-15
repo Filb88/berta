@@ -209,8 +209,12 @@ main {
     animation: fadeIn2 2s ease-in-out forwards; /* Make the animation 2 seconds for better visibility */
 }
 
-
-
+.email {
+    color: black;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
 
 .line {
     height: 2px;
